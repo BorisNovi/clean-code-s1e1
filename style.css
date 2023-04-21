@@ -82,10 +82,7 @@ button:hover {
   text-transform: uppercase;
 }
 
-.add-item__input,
-.normal-mode__input,
-.edit-mode__input,
-.completed-mode__input {
+input[type="text"] {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -98,15 +95,12 @@ button:hover {
   color: #888;
 }
 
-.add-item__input:focus ,
-.normal-mode__input:focus ,
-.edit-mode__input:focus ,
-.completed-mode__input:focus {
+input[type="text"] {
   color: #333;
 }
 
 /* New Task */
-label[for='new-task'] {
+.add-item__label {
   display: block;
   margin: 0 0 20px;
 }
@@ -116,11 +110,12 @@ label[for='new-task'] {
 }
 
 /* Task list */
+
+/* Там, где элементы генерируются динамически - оставил обращения по тегам */
 li {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -151,12 +146,12 @@ li>input[type="text"] {
   transition: transform 200ms ease-in;
 }
 
-button.delete img:hover {
+.delete img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-ul#completed-tasks label {
+#completed-tasks label {
   text-decoration: line-through #888;
 }
 
@@ -165,11 +160,11 @@ ul li input[type=text] {
   display: none
 }
 
-ul li.edit-mode input[type=text] {
+.edit-mode input[type=text] {
   display: inline-block;
   width: 224px
 }
 
-ul li.edit-mode label {
+.edit-mode label {
   display: none;
 }
